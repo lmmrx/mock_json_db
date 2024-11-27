@@ -12,7 +12,7 @@ app.set("views", "./views");
 
 //using express.Router() to organize routes
 app.use(userRoutes);
-//Serves static files in public foler
+//Serves static files in public folder
 app.use(express.static('public'));
 
 //to start the server
