@@ -65,9 +65,24 @@ async function updateUser(req, res){
 //async fucntion to delete a user
 async function deleteUser(req, res){
     try{
+        const data = await readData();
+
+        //finder function that fetch user by Id
+        const user = data.users.find(user => user.id === parseInt(req.params.id));
+
+        //check if user exists. splice the user from the users array/object
+        if(user){
+            //user is index position or id. "1" is the match to remove.
+           data.users.splice(user, 1);
+           await writeData(data);
+
+           res.status(200).json("User deleted succesfully");
+        } else {
+            res.status(404).json("User not found. Please try again.");
+        }
             
     }catch(error){
-
+        res.status(500).json(`Internal Server Error: ${error}`);
     }
 }
 

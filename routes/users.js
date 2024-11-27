@@ -16,7 +16,7 @@ router.post('/users', userController.createUser);
 router.post('/users/:id/update', userController.updateUser);
 
 //delete user
-router.delete('/users/:id/delete', userController.deleteUser);
+router.post('/users/:id/delete', userController.deleteUser);
 
 //render the view
 router.get('/', (req, res) => {
