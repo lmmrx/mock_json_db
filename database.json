@@ -1,3 +1,22 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": 1,
+      "username": "papi",
+      "first_name": "papi",
+      "email": "papi@papi.com"
+    },
+    {
+      "id": 2,
+      "username": "bob",
+      "first_name": "Bobby Barbers",
+      "email": "bobbybarbers@gmail.com"
+    },
+    {
+      "id": 3,
+      "username": "elpedro",
+      "first_name": "pedro chulo",
+      "email": "pchulo@gmail.com"
+    }
+  ]
 }
